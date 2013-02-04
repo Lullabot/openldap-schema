@@ -31,7 +31,13 @@ olcAttributeTypes: ( 1.3.6.1.4.1.41223.1.1.2.1.5 NAME 'googleTalk'
   SUBSTR caseIgnoreSubstringsMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
   )
+olcAttributeTypes: ( 1.3.6.1.4.1.41223.1.1.2.1.6 NAME 'frequentFlyerMileNumber'
+  DESC 'Frequent flyer mile number'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+  )
 olcObjectClasses: ( 1.3.6.1.4.1.41223.1.1.2.2.1 NAME 'lullabotPerson' SUP top AUXILIARY
   DESC 'Lullabot extensions to the inetOrgPerson objectClass'
-  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk )
+  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber )
   )
