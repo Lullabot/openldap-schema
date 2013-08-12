@@ -37,19 +37,19 @@ olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.6 NAME 'frequentFlyerMileNumber'
   SUBSTR caseIgnoreSubstringsMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
   )
-olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.7 NAME 'SIPaddress'
-  DESC 'SIP Address'
+olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.7 NAME 'SIPextension'
+  DESC 'SIP Extension'
   EQUALITY caseIgnoreMatch
   SUBSTR caseIgnoreSubstringsMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
   )
-olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.8 NAME 'SIPpassword'
-  DESC 'SIP Passwor'
+olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.8 NAME 'SIPsecret'
+  DESC 'SIP Password'
   EQUALITY caseIgnoreMatch
   SUBSTR caseIgnoreSubstringsMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
   )
 olcObjectClasses: ( 1.3.6.1.4.1.41259.1.1.2.2.1 NAME 'lullabotPerson' SUP top AUXILIARY
   DESC 'Lullabot extensions to the inetOrgPerson objectClass'
-  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber $ SIPaddress $ SIPpassword )
+  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber $ SIPsecret $ SIPextension )
   )
