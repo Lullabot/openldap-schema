@@ -51,5 +51,5 @@ olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.8 NAME 'SIPpassword'
   )
 olcObjectClasses: ( 1.3.6.1.4.1.41259.1.1.2.2.1 NAME 'lullabotPerson' SUP top AUXILIARY
   DESC 'Lullabot extensions to the inetOrgPerson objectClass'
-  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber )
+  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber $ SIPaddress $ SIPpassword )
   )
