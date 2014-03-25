@@ -54,7 +54,13 @@ olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.9 NAME 'SIPmailboxPin'
   EQUALITY integerMatch
   SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
   )
+olcAttributeTypes: ( 1.3.6.1.4.1.41259.1.1.2.1.10 NAME 'SIPcodec'
+  DESC 'space-separated list of preferred SIP codecs'
+  EQUALITY caseIgnoreMatch
+  SUBSTR caseIgnoreSubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+  )
 olcObjectClasses: ( 1.3.6.1.4.1.41259.1.1.2.2.1 NAME 'lullabotPerson' SUP top AUXILIARY
   DESC 'Lullabot extensions to the inetOrgPerson objectClass'
-  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber $ SIPsecret $ SIPextension $ SIPmailboxPin)
+  MAY ( irc $ skype $ drupalOrgUid $ aim $ googleTalk $ frequentFlyerMileNumber $ SIPsecret $ SIPextension $ SIPmailboxPin $ SIPcodec )
   )
